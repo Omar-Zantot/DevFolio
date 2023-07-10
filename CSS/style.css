@@ -1,0 +1,457 @@
+/* ~ ____________________ {My Global Style } ____________________*/
+
+:root {
+  /* ^ ==================> colors <==================*/
+  --p-color: #4e4e4e;
+  --mian-color: #1e1e1e;
+  --s-color: #0078ff;
+  /* ^ ==================> fonts <==================*/
+}
+
+/* ^ ==============> Customized Style <===============*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a,
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h1,
+h2,
+h3,
+h5{
+  color: var(--mian-color);
+}
+
+p {
+  color: var(--p-color);
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #f5f5f5;
+}
+/* * ==================> line-hieght <==================*/
+.lh-58 {
+  line-height: 58px;
+}
+.lh-38 {
+  line-height: 38px;
+}
+.lh-34 {
+  line-height: 34px;
+}
+.lh-30 {
+  line-height: 30px;
+}
+.lh-26 {
+  line-height: 26px;
+}
+/* * ==================> font-size <==================*/
+.fs-48 {
+  font-size: 48px;
+}
+.fs-72 {
+  font-size: 72px;
+}
+.fs-22 {
+  font-size: 22px;
+}
+.fs-18 {
+  font-size: 18px;
+}
+
+/* * ==================> padding <==================*/
+.pt-64 {
+  padding-block: 64px;
+}
+/* * ==================> Margin <==================*/
+.mb-32 {
+  margin-bottom: 2rem;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+/* * ==================>   Box   <==================*/
+.box-shadow-full {
+  padding: 3rem 1.25rem;
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 3rem;
+  z-index: 2;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) {
+  .box-shadow-full {
+    padding: 3rem;
+  }
+}
+
+/* ~ ____________________ {My Repeated Style } ____________________*/
+
+/* * ==================>   titles  <==================*/
+.title-s {
+  font-weight: 600;
+  color: var(--mian-color);
+  font-size: 1.1rem;
+}
+.title-left::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  background-color: var(--s-color);
+  width: 100px;
+  bottom: -12px;
+}
+.section-title .hb-line {
+  width: 40px;
+  height: 5px;
+  margin: 0 auto;
+  /* background-color: var(--s-color); */
+}
+
+/* * ==================>   Ico Circle  <==================*/
+.ico-circle {
+  height: 100px;
+  width: 100px;
+  font-size: 2rem;
+  border-radius: 50%;
+  line-height: 1.55;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0 0 0 10px var(--s-color);
+  display: block;
+}
+
+/* & ____________________ {My Navbar Style } ____________________*/
+
+
+
+.myNav-bg {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 12px 0;
+  z-index: 999;
+}
+
+.navbar-nav .nav-item {
+  white-space: nowrap;
+  padding: 10px 0px 10px 30px;
+  /* background-color: #0078ff; */
+}
+
+/* ! remove padding to make better underline */
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 0;
+}
+
+.navbar a,
+.navbar a:focus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 0;
+  white-space: nowrap;
+  transition: 0.3s;
+  letter-spacing: 0.4px;
+  position: relative;
+}
+
+.navbar-nav .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #fff;
+  left: 0;
+  bottom: -6px;
+  transition: width 400ms ease-in-out 0s;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+  width: 80%;
+}
+
+/* & ____________________ {My Home Style } ____________________*/
+
+.bg-img {
+  background-image: url("../imgs/hero-bg.jpg");
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.home-layer {
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* & ____________________ {My About Style } ____________________*/
+
+.skill span {
+  color: #4e4e4e;
+}
+
+.skill .progress {
+  background-color: #cde1f8;
+  margin: 0.5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: 0.7rem;
+}
+
+.skill .progress .progress-bar {
+  height: 0.7rem;
+  background-color: var(--s-color);
+}
+
+/* & ____________________ {My Services Style } ____________________*/
+
+.service-box {
+  background-color: #fff;
+  padding: 2.5rem 1.3rem;
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+}
+
+.service-box:hover .ico-circle {
+  transition: all 500ms ease;
+  color: #fff;
+  background-color: var(--s-color);
+  box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.service-box .service-ico {
+  margin-bottom: 1rem;
+  color: var(--mian-color);
+}
+
+.service-box .ico-circle {
+  transition: all 500ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-box .ico-circle i {
+  line-height: 0;
+  font-size: 40px;
+}
+
+.service-box .s-title {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 0.4rem 0;
+}
+
+.service-box .s-description {
+  color: var(--p-color);
+}
+/* & ____________________ {My Stats Style } ____________________*/
+
+#stats {
+  background: linear-gradient(
+      to top,
+      rgba(0, 119, 255, 0.7),
+      rgba(0, 119, 255, 0.7)
+    ),
+    url(../imgs/counters-bg.jpg) center/cover fixed no-repeat;
+  color: #fff;
+}
+
+#stats .col div > i {
+  font-size: 2rem;
+  border: 8px solid rgba(255, 255, 255, 0.7);
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  /* ? New use grid */
+  display: grid;
+  place-content: center;
+  margin-bottom: 10px;
+}
+
+/* & ____________________ {My Work Style } ____________________*/
+
+#work a > i {
+  border-color: #0078ff !important;
+}
+
+#work .row .col div .img {
+  overflow: hidden;
+}
+
+#work .row .col div .img img {
+  transition: 0.6s;
+}
+
+#work .row .col div:hover .img img {
+  transform: scale(1.2);
+}
+
+#work small {
+  color: var(--p-color);
+}
+
+/* & ____________________ {My Test Style } ____________________*/
+
+#test {
+  background: linear-gradient(
+      to top,
+      rgba(0, 119, 255, 0.7),
+      rgba(0, 119, 255, 0.7)
+    ),
+    url(../imgs/overlay-bg.jpg) center/cover fixed no-repeat;
+    
+    text-align: center;
+}
+
+#testslider{
+    padding-bottom: 4rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#test p , #test h3{
+    color: #fff;
+}
+
+#test .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+/* & ____________________ {My Blog Style } ____________________*/
+
+#blog .row .col .card .img{
+  position: relative;
+}
+
+#blog .row .col .card .img::after{
+  position: absolute;
+  content: attr(data-content);
+  padding: 0.35rem 1rem;
+  border-radius:5px;
+  font-size: 0.75rem;
+  background-color: var(--s-color);
+  color:#fff;
+  bottom: 0;
+  left:50%;
+  transform: translate(-50%,25%);
+  /* top:90%; */
+  
+}
+
+
+
+#blog .row .col .card-body a,
+#blog .row .col .card-footer a{
+    transition: color 0.3s;
+}
+
+#blog .row .col .card-body a:hover,
+#blog .row .col .card-footer a:hover{
+    color: var(--s-color) !important;
+}
+
+/* & ____________________ {My Contact Style } ____________________*/
+
+
+.socials {
+  padding: 1.5rem 0;
+}
+
+.socials ul li {
+  display: inline-block;
+}
+
+.socials .ico-circle {
+  height: 40px;
+  width: 40px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  line-height: 1.6;
+  margin: 0 15px 0 0;
+  box-shadow: 0 0 0 3px #0078ff;
+  transition: all 500ms ease;
+}
+
+.socials .ico-circle:hover {
+  background-color: #0078ff;
+  color: #fff;
+  box-shadow: 0 0 0 3px #cde1f8;
+  transition: all 500ms ease;
+}
+
+
+#contact{
+  background: linear-gradient(
+      to top,
+      rgba(0, 119, 255, 0.7),
+      rgba(0, 119, 255, 0.7)
+    ),
+    url(../imgs/overlay-bg.jpg) center/cover fixed no-repeat;
+    
+    text-align: center;
+
+}
+
+#contact form button{
+  border:none;
+  font-size: 1.1rem;
+}
+
+#contact form button:hover{
+  background-color:#3393ff;
+  box-shadow: 0 0 0 10 px #cde1f8;
+}
+
+/* & ____________________ {My Footer Style } ____________________*/
+
+
+footer {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0;
+  background: #0062d3;
+}
+
+
+
